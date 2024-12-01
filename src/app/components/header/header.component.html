@@ -1,0 +1,27 @@
+<div class="container relative my-7">
+    <div id="navbar" class="bg-white shadow-lg flex items-center h-18 py-5 px-5 fixed top-0 z-10 w-full transition-opacity duration-300 ease-in-out">
+        
+        <div class="md:hidden flex items-start">
+            <p-button icon="pi pi-bars"></p-button>
+        </div>
+
+        <nav class="flex items-center justify-between w-full">
+
+            <div class="hidden md:flex space-x-2 flex-grow justify-start" >
+                <p-button class="btn" [outlined]="true" label="Create Box" />
+                <p-button class="btn" [outlined]="true" label="Get Inspired" />
+                <p-button class="btn" [outlined]="true" label="Shop" />
+            </div>
+
+            <div class="hidden md:flex space-x-2 flex-grow justify-end" >
+                <i class="pi pi-shopping-cart mr-5" style="font-size: 2rem;" pBadge value="0"></i>
+            </div>
+        </nav>
+
+        <div class="absolute mx-auto left-0 right-0 text-center w-fit">
+            <img src="assets/images/logo-no-bg2.png" alt="Logo" class="h-14 w-auto">
+        </div>
+
+    </div>
+</div>
+        

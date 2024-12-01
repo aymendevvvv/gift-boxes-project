@@ -1,0 +1,19 @@
+@tailwind utilities;
+
+::ng-deep {
+    .p-button-label{
+        color: black;
+    }
+    
+    .p-button{
+      border-color: #f3975e ;
+    }
+
+    .p-button:hover{
+        background-color: #fff1e8 ;
+    }
+    
+    .p-button:focus {
+        background-color: #fff1e8 ;
+    }
+}
