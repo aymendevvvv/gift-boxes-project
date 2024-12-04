@@ -1,0 +1,31 @@
+<div class="relative h-full overflow-y-hidden">
+    <div class="absolute top-0 left-0 w-full h-full bg-[rgba(255,255,255,0.15)] z-10">
+        <div class="relative top-[20%] flex flex-col items-center gap-4 text-center">
+            
+            <p class="typing-effect text-center text-white font-bold text-2xl">
+                Gifts that will be remembered
+            </p>
+        
+            <p class="text-white mb-12">
+                We help you make custom gift boxes that leave a lasting impression
+            </p>
+
+            <button class="glow-button"
+                style="padding: 12px 24px; font-size: 1.5rem; background-color: rgba(255, 255, 255, 0.199); border: none;  cursor: pointer; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);">
+                Start designing
+            </button>
+        </div>
+    </div>
+
+    <p-galleria [value]="images" [autoPlay]="true" [circular]="true" [showIndicators]="false" [showThumbnails]="false"
+        [numVisible]="5" [containerStyle]="{ 'max-width': '100%', 'position': 'relative', 'z-index': '5'}" >
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item.itemImageSrc" style="width: 100%;" />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+            <div class="grid grid-nogutter justify-content-center">
+                <img [src]="item.thumbnailImageSrc" />
+            </div>
+        </ng-template>
+    </p-galleria>
+</div>

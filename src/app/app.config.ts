@@ -1,14 +1,17 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import { routes } from './app.routes';
+import routes from './routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
+//TODO use this in the main.ts file 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes), 
-    provideAnimations(), 
-    provideClientHydration()]
+    provideClientHydration(), 
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideAnimations(),
+  ],
 
 };
