@@ -6,9 +6,9 @@
             <p-stepperPanel header="choose box">
                 <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
                     <div class="flex flex-column h-12rem">
-                        <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                            carousel here !
-                        </div>
+
+                        <app-choose-box></app-choose-box>
+                        
                         <div class="flex pt-4 justify-content-end">
                             <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" />
                         </div> <!-- delete this and later make it emit the event on box chosed -->
