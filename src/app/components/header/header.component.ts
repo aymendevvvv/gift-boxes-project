@@ -31,7 +31,7 @@ export class HeaderComponent {
     const navbar = document.getElementById('navbar');
     
     if (navbar) {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 120) {
         this.renderer.addClass(navbar, 'opacity-0');
         this.renderer.removeClass(navbar, 'opacity-60');
         this.renderer.removeClass(navbar, 'opacity-100');

@@ -1,6 +1,6 @@
 import {Routes} from '@angular/router';
 import {HomepageComponent} from './components/homepage/homepage.component';
-import { CreateBoxComponentComponent } from './components/create-box-component/create-box-component.component';
+import { StepsComponent } from './components/steps/steps.component';
 
 const routeConfig: Routes = [
   {
@@ -10,7 +10,7 @@ const routeConfig: Routes = [
   },
   {
     path: 'create-box',
-    component: CreateBoxComponentComponent,
+    component: StepsComponent,
     title: 'Create Box',
   },
   //todo { path: '**', component: PageNotFoundComponent }

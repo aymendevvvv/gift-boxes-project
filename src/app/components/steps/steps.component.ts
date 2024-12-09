@@ -3,12 +3,13 @@ import { ButtonModule } from 'primeng/button';
 import { StepperModule } from 'primeng/stepper';
 
 @Component({
-  selector: 'app-create-box-component',
+  selector: 'app-steps',
   standalone: true,
   imports: [ButtonModule, StepperModule],
-  templateUrl: './create-box-component.component.html',
-  styleUrl: './create-box-component.component.scss'
+  templateUrl: './steps.component.html',
+  styleUrl: './steps.component.scss'
 })
-export class CreateBoxComponentComponent {
+export class StepsComponent {
 
 }
+

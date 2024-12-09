@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
-import { SlideshowComponent } from '../slideshow/slideshow.component';
-
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 @Component({
   selector: 'app-homepage',
