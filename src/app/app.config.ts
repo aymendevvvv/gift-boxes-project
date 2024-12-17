@@ -1,17 +1,27 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
-import routes from './routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
 import { provideClientHydration } from '@angular/platform-browser';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { MyPreset } from './../assets/themes/mytheme';
 
-//TODO use this in the main.ts file 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideClientHydration(), 
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
-    provideAnimations(),
-  ],
-
+    providers: [
+        provideAnimationsAsync(),
+        providePrimeNG({ 
+            theme: {
+                preset: MyPreset,
+                options: {
+                    cssLayer: {
+                        name: 'primeng',
+                        order: 'tailwind-base, primeng, tailwind-utilities'
+                    }
+                }
+            }
+        }),
+        provideClientHydration(), 
+        provideZoneChangeDetection({ eventCoalescing: true }),
+        provideRouter(routes),
+    ]
 };
