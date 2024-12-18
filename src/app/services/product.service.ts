@@ -61,9 +61,9 @@ export class ProductService {
       {
         id: '1004',
         code: 'h456wer53',
-        name: 'Golf T-Shirt',
+        name: 'Braclet',
         description: 'Product Description',
-        image: 'golf-t-shirt.jpg',
+        image: 'bracelet.jpg',
         price: 50,
         category: 'Clothing',
         quantity: 0,
@@ -72,5 +72,71 @@ export class ProductService {
       },
     ];
     return of(dummyProducts);
+  }
+
+  getDummyBoxes(): Observable<Product[]> {
+    const dummyBoxes: Product[] = [
+      {
+        id: '2000',
+        code: 'box1001',
+        name: 'Box of Essentials',
+        description: 'A variety of daily essentials',
+        image: 'assets/images/boxes/box4.png',
+        price: 100,
+        category: 'Boxes',
+        quantity: 10,
+        inventoryStatus: 'INSTOCK',
+        rating: 5,
+      },
+      {
+        id: '2001',
+        code: 'box1002',
+        name: 'Fitness Starter Pack',
+        description: 'Pack includes multiple fitness items',
+        image: 'assets/images/boxes/box2.png',
+        price: 120,
+        category: 'Boxes',
+        quantity: 15,
+        inventoryStatus: 'INSTOCK',
+        rating: 4,
+      },
+      {
+        id: '2002',
+        code: 'box1003',
+        name: 'Luxury Gift Box',
+        description: 'A premium selection of accessories',
+        image: 'assets/images/boxes/box3.png',
+        price: 250,
+        category: 'Boxes',
+        quantity: 5,
+        inventoryStatus: 'OUTOFSTOCK',
+        rating: 5,
+      },
+      {
+        id: '2003',
+        code: 'box1004',
+        name: 'Travel Essentials',
+        description: 'Everything you need for a smooth trip',
+        image: 'assets/images/boxes/box4.png',
+        price: 180,
+        category: 'Boxes',
+        quantity: 12,
+        inventoryStatus: 'INSTOCK',
+        rating: 4,
+      },
+      {
+        id: '2004',
+        code: 'box1005',
+        name: 'Tech Essentials',
+        description: 'Tech gadgets and accessories',
+        image: 'assets/images/boxes/box1.png',
+        price: 150,
+        category: 'Boxes',
+        quantity: 8,
+        inventoryStatus: 'INSTOCK',
+        rating: 4,
+      },
+    ];
+    return of(dummyBoxes);
   }
 }

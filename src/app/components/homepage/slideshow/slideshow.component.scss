@@ -37,7 +37,15 @@
     animation: glow-button 3s infinite;
     min-width: 200px;
     max-width: 100%;
-    
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; // Remove default underline on link
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+
     @media (max-width: 640px) {
         width: 100%;
         max-width: 300px;
@@ -57,14 +65,36 @@
     }
 }
 
+// Ensure link looks like button
+a.glow-button {
+    display: inline-block;
+    padding: 12px 24px;
+    color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    background: transparent;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+        transform: scale(1.05);
+    }
+
+    &:focus {
+        outline: none;
+        ring: 2px solid rgba(255, 255, 255, 0.8);
+    }
+}
+
 :host ::ng-deep {
     .p-galleria {
-        .p-galleria-content{
-            height: 100%;                                                                             
-        }  
-        .p-galleria-items-container{
-            height: 100%;            
+        .p-galleria-content {
+            height: 100%;
         }
-        
+        .p-galleria-items-container {
+            height: 100%;
+        }
     }
 }

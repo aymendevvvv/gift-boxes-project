@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { GalleriaModule } from 'primeng/galleria';
 
 @Component({
   selector: 'app-slideshow',
   standalone: true,
-  imports: [GalleriaModule],
+  imports: [GalleriaModule, RouterModule],
   templateUrl: './slideshow.component.html',
   styleUrl: './slideshow.component.scss'
 })

@@ -1,0 +1,15 @@
+:host ::ng-deep {
+    .p-dataview-content,
+    .p-dataview,
+    .p-step-panel {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    .p-card {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}

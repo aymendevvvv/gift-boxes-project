@@ -1,14 +1,14 @@
 import { Component , OnInit} from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
-import { TagModule } from 'primeng/tag';
 import { ProductService } from '../../../services/product.service';
 import { Product } from '../../../models/product';
+import { Carousel } from 'primeng/carousel';
+import { Tag } from 'primeng/tag';
 
 @Component({
   selector: 'app-choose-box',
   standalone: true,
-  imports: [CarouselModule, ButtonModule, TagModule],
+  imports: [Carousel, ButtonModule, Tag],
   templateUrl: './choose-box.component.html',
   styleUrl: './choose-box.component.scss'
 })
@@ -20,7 +20,7 @@ export class ChooseBoxComponent {
   constructor(private productService: ProductService) {}
 
   ngOnInit(){
-    this.productService.getDummyProducts().subscribe({
+    this.productService.getDummyBoxes().subscribe({
       next: (data) => (this.boxList = data),
       error: (err) => console.error('Failed to fetch products', err),
     });
